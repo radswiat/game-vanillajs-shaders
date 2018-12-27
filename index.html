@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <link rel="icon" type="image/png" href="img/common/favicon.png">
+        <link rel="stylesheet" href="assets/css/main.css" type="text/css">
+        <title>BrowserQuest</title>
+
+        <script>
+
+        	//gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
+
+        </script>
+
+		<script id="shader-fs" type="x-shader/x-fragment">
+		    precision mediump float;
+
+		    varying vec2 vTextureCoord;
+
+		    uniform sampler2D uSampler;
+
+		    void main(void) {
+		        gl_FragColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));
+		    }
+		</script>
+
+		<script id="shader-vs" type="x-shader/x-vertex">
+		    attribute vec3 aVertexPosition;
+		    attribute vec2 aTextureCoord;
+
+		    uniform mat4 uMVMatrix;
+		    uniform mat4 uPMatrix;
+		    uniform vec3 uScale;
+
+		    varying vec2 vTextureCoord;
+
+
+		    void main(void) {
+		    	vec3 modVertexPosition = uScale * aVertexPosition;
+		        gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0);
+		        vTextureCoord = aTextureCoord;
+		    }
+		</script>
+	</head>
+	<body>
+
+	<div class="wrapper">
+
+		<section id="canvas-legends">
+			<h1>Legends</h1>
+			<p><label>Steer with arrows :</label> up, down, left, right</p>
+			<p><label>Pitch up :</label> Q </p>
+			<p><label>Pitch down :</label> E </p>
+			<p><label>Cube rotate :</label> A, S, D, W </p>
+		</section>
+
+		<section id="canvas-tools" class="" style="display: none;">
+
+		</section>
+
+		<canvas id="canvas-board" style="border: none;" width="1024" height="600"></canvas>
+
+	</div>
+
+
+	<script src="bin/lib/gl-matrix-old.js"></script>
+
+	<script>JSCLASS_PATH = 'bin/lib/class'</script>
+	<script src="bin/lib/class/core.js"></script>
+	<script>
+		window.JSCLASS = JS;
+		window.JS = undefined;
+	</script>
+	<script data-main="bin/app/main" src="bin/lib/require.js"></script>
+	</body>
+</html>

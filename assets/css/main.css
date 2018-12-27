@@ -1,0 +1,227 @@
+body {
+  background: #999;
+  background-image: url(http://footprint-photography.com/blog/wp-content/uploads/2011/05/texture-7-dark.jpg);
+}
+.wrapper {
+  width: 1024px;
+  margin: 0px auto;
+  margin-top: 50px;
+}
+#canvas-board {
+  overflow: hidden;
+  float: left;
+  outline: 1px solid #2e2e2e;
+  box-shadow: 5px 5px 7px #121212;
+}
+#canvas-legends {
+  top: 7%;
+  right: 5%;
+  position: absolute;
+  background: white;
+  padding: 10px;
+  background: url('../img/bg-menu.png');
+  background-size: 376px;
+  color: #bababa;
+  border: 5px solid #333;
+  text-shadow: 2px 3px 3px black;
+}
+#canvas-legends p {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#canvas-legends p label {
+  font-weight: bold;
+}
+#preloader {
+  width: 120px;
+  height: 120px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -60px;
+  background: red;
+  z-index: 999999;
+  display: block;
+  background: url('../img/preloader.gif');
+  border-radius: 200px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ffffff;
+  background-size: 50%;
+}
+#preloader div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#preloader div span {
+  color: white;
+  display: block;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  top: 140px;
+  width: 100%;
+}
+#overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999998;
+}
+#canvas-tools {
+  float: right;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: #818181;
+  border: 1px solid #2e2e2e;
+  box-shadow: 5px 5px 7px #121212;
+  box-sizing: border-box;
+}
+#canvas-tools .toolitem {
+  box-sizing: border-box;
+  clear: both;
+  float: none;
+  left: 0;
+  margin: 20px 0 0 20px;
+}
+#canvas-tools .slideThree span {
+  color: #262b1e;
+  font-size: 18px;
+  font-weight: bold;
+  left: 95px;
+  position: absolute;
+  text-shadow: 1px 1px #acb1a4;
+  top: 0;
+}
+#canvas-tools .input input {
+  background: #EBF0E3;
+  border: 2px solid #333333;
+}
+#canvas-tools .input span {
+  position: relative;
+  text-shadow: 1px 1px #acb1a4;
+  color: #262b1e;
+  font-size: 18px;
+  font-weight: bold;
+}
+#canvas-tools .input span b {
+  margin-left: 20px;
+}
+/* SLIDE THREE */
+.slideThree {
+  width: 80px;
+  height: 26px;
+  background: #333;
+  margin: 20px auto;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  position: relative;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+.slideThree input[type=checkbox] {
+  visibility: hidden;
+}
+.slideThree:after {
+  content: 'OFF';
+  font: 12px/26px Arial, sans-serif;
+  color: #000;
+  position: absolute;
+  right: 10px;
+  z-index: 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.15);
+}
+.slideThree:before {
+  content: 'ON';
+  font: 12px/26px Arial, sans-serif;
+  color: #00bf00;
+  position: absolute;
+  left: 10px;
+  z-index: 0;
+  font-weight: bold;
+}
+.slideThree label {
+  display: block;
+  width: 34px;
+  height: 20px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -o-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  transition: all .4s ease;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  background: #fcfff4;
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0);
+}
+.slideThree input[type=checkbox]:checked + label {
+  left: 43px;
+}
+.slider {
+  width: 300px;
+}
+.slider > .dragger {
+  background: #8DCA09;
+  background: -webkit-linear-gradient(top, #8dca09, #72a307);
+  background: -moz-linear-gradient(top, #8dca09, #72a307);
+  background: linear-gradient(top, #8dca09, #72a307);
+  -webkit-box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 2px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 2px 2px rgba(255, 255, 255, 0.5), 0 2px 8px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #496805;
+  width: 16px;
+  height: 16px;
+}
+.slider > .dragger:hover {
+  background: -webkit-linear-gradient(top, #8dca09, #8dca09);
+}
+.slider > .track,
+.slider > .highlight-track {
+  background: #ccc;
+  background: -webkit-linear-gradient(top, #bbbbbb, #dddddd);
+  background: -moz-linear-gradient(top, #bbbbbb, #dddddd);
+  background: linear-gradient(top, #bbbbbb, #dddddd);
+  -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  height: 4px;
+}
+.slider > .highlight-track {
+  background-color: #8DCA09;
+  background: -webkit-linear-gradient(top, #8dca09, #72a307);
+  background: -moz-linear-gradient(top, #8dca09, #72a307);
+  background: linear-gradient(top, #8dca09, #72a307);
+  border-color: #496805;
+}
